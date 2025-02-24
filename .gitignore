@@ -4,3 +4,11 @@
 
 /.vs/TaskCoreHub
 /TaskCoreHub.Core/obj
+/.vs/ProjectEvaluation
+/TaskCoreHub.Api/bin/Debug/net8.0
+/TaskCoreHub.Api/obj
+/TaskCoreHub.Application/obj
+/TaskCoreHub.Core/bin/Debug/net8.0
+/TaskCoreHub.Infrastructure/obj
+/TaskCoreHub.Api/appsettings.Development.json
+/TaskCoreHub.Api/appsettings.json
