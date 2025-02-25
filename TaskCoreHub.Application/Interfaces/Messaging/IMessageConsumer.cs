@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TaskCoreHub.Application.DTOs;
 
 namespace TaskCoreHub.Application.Interfaces.Messaging

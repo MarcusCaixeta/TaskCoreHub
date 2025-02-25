@@ -8,17 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.SQS" Version="3.7.400.99" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TaskCoreHub.Application\TaskCoreHub.Application.csproj" />
     <ProjectReference Include="..\TaskCoreHub.Core\TaskCoreHub.Core.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Persistence\Context\" />
-    <Folder Include="Persistence\Configurations\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,7 @@
-﻿using System;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NSubstitute;
 using TaskCoreHub.Core.Entitites;
 using TaskCoreHub.Core.ValueObjects;
-using Xunit;
 
 namespace CoreTests.Tests
 {
