@@ -15,7 +15,7 @@ namespace CoreTests.Tests
             var reason = Substitute.For<Reason>();
             var user = Substitute.For<User>();
             var priority = Priority.Medium;
-            var effort = new Effort(5);
+            var effort = 5;
             var dateStart = DateTime.UtcNow;
 
             // Act
@@ -35,7 +35,7 @@ namespace CoreTests.Tests
             var reason = Substitute.For<Reason>();
             var user = Substitute.For<User>();
             var priority = Priority.High;
-            var effort = new Effort(10);
+            var effort = 10;
             var dateStart = DateTime.UtcNow;
 
             // Act & Assert
@@ -57,7 +57,7 @@ namespace CoreTests.Tests
             var user = Substitute.For<User>();
             var anotherUser = Substitute.For<User>();
             var priority = Priority.Medium;
-            var effort = new Effort(3);
+            var effort = 3;
             var dateStart = DateTime.UtcNow;
             var demand = new Demand("Task A", "Implement X", team, reason, user, dateStart, priority, effort);
 
@@ -77,7 +77,7 @@ namespace CoreTests.Tests
             var reason = Substitute.For<Reason>();
             var user = Substitute.For<User>();
             var priority = Priority.High;
-            var effort = new Effort(5);
+            var effort = 5;
             var dateStart = DateTime.UtcNow;
             var demand = new Demand("Feature X", "Build a new module", team, reason, user, dateStart, priority, effort);
             demand.StartProgress(user); // Muda status para InProgress
@@ -97,7 +97,7 @@ namespace CoreTests.Tests
             var finishReason = Substitute.For<Reason>();
             var user = Substitute.For<User>();
             var priority = Priority.Low;
-            var effort = new Effort(2);
+            var effort = 2;
             var dateStart = DateTime.UtcNow;
             var demand = new Demand("Fix Bug", "Resolve issue Y", team, reason, user, dateStart, priority, effort);
             demand.StartProgress(user);
@@ -120,7 +120,7 @@ namespace CoreTests.Tests
             var finishReason = Substitute.For<Reason>();
             var user = Substitute.For<User>();
             var priority = Priority.Low;
-            var effort = new Effort(2);
+            var effort = 2;
             var dateStart = DateTime.UtcNow;
             var demand = new Demand("Fix Bug", "Resolve issue Y", team, reason, user, dateStart, priority, effort);
 

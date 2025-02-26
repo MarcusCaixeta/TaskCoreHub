@@ -1,6 +1,10 @@
+using Microsoft.EntityFrameworkCore;
 using TaskCoreHub.Api.DependencyInjection;
+using TaskCoreHub.Infrastructure.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<TaskCoreHubDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("TaskCoreHubDb")));
 
 builder.Services.AddSqsServices(builder.Configuration);
 

@@ -7,7 +7,7 @@ namespace TaskCoreHub.Core.Entitites
         private Demand() { } // Para o ORM
 
         public Demand(string title, string description, Team team, Reason startReason, User userCreate, DateTime dateStart,
-                      Priority priority, Effort effort)
+                      Priority priority, int effort)
         {
             Title = title ?? throw new ArgumentException("Title is required");
             Description = description ?? throw new ArgumentException("Description is required");
@@ -34,7 +34,7 @@ namespace TaskCoreHub.Core.Entitites
         public DateTime? DateFinish { get; private set; }
         public DemandStatus Status { get; private set; }
         public Priority Priority { get; private set; }
-        public Effort Effort { get; private set; }
+        public int Effort { get; private set; }
 
         public void StartProgress(User user)
         {

@@ -17,3 +17,4 @@
 /TaskCoreHub.Tests/obj
 /TaskCoreHub.Tests/bin/Debug/net8.0
 
+/TaskCoreHub.Infrastructure/Migrations
