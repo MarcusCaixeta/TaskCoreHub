@@ -7,10 +7,10 @@ namespace TaskCoreHub.Infrastructure.Persistence.Context
     {
         public TaskCoreHubDbContext(DbContextOptions<TaskCoreHubDbContext> options) : base(options) { }
 
-        public DbSet<App> Application { get; set; }
+        public DbSet<App> App { get; set; }
         public DbSet<AttachmentDemand> AttachmentDemand { get; set; }
         public DbSet<Demand> Demand { get; set; }
-        public DbSet<DemandApplication> DemandApplication { get; set; }
+        public DbSet<DemandApp> DemandApp { get; set; }
         public DbSet<LogDemand> LogDemand { get; set; }
         public DbSet<Reason> Reason { get; set; }
         public DbSet<StatusDemand> StatusDemand { get; set; }

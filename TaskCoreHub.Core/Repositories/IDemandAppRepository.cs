@@ -2,8 +2,9 @@
 
 namespace TaskCoreHub.Core.Repositories
 {
-    public interface IAppRepository
+    public interface IDemandAppRepository
     {
-        Task<Guid> Create(App app);
+        Task<Guid> Create(DemandApp demandApp);
+
     }
 }

@@ -1,0 +1,27 @@
+﻿using Microsoft.Extensions.DependencyInjection;
+using TaskCoreHub.Application.Commands.AppCommands.CreateAppCommand;
+using TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttachmentDemandCommand;
+using TaskCoreHub.Application.Commands.DemandAppCommands.CreateDemandAppCommand;
+
+namespace TaskCoreHub.Application
+{
+    public static class ApplicationModule
+    {
+        public static IServiceCollection AddApplication(this IServiceCollection services)
+        {
+            services.AddMediator();
+            return services;
+        }
+
+        private static IServiceCollection AddMediator(this IServiceCollection services)
+        {
+            services.AddMediatR(cfg =>
+            {
+                cfg.RegisterServicesFromAssemblyContaining<CreateAppCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<CreateAttachmentDemandCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<CreateDemandAppCommand>();
+            });
+            return services;
+        }
+    }
+}

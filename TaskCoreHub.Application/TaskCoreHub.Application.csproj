@@ -14,7 +14,6 @@
   <ItemGroup>
     <Folder Include="Commands\UserCommands\CreateUserCommand\" />
     <Folder Include="Commands\DemandCommands\CreateDemandCommand\" />
-    <Folder Include="Commands\DemandApplicationCommands\CreateDemandApplicationCommand\" />
     <Folder Include="Commands\LogDemandCommands\CreateLogDemandCommand\" />
     <Folder Include="Commands\UserCommands\" />
     <Folder Include="Commands\TypeLogCommands\" />
@@ -25,7 +24,6 @@
     <Folder Include="Commands\TeamCommands\CreateTeamCommand\" />
     <Folder Include="Commands\TypeLogCommands\CreateTypeLogCommand\" />
     <Folder Include="Commands\DemandCommands\" />
-    <Folder Include="Commands\DemandApplicationCommands\" />
     <Folder Include="Commands\LogDemandCommands\" />
     <Folder Include="Commands\ReasonCommands\" />
     <Folder Include="Queries\" />

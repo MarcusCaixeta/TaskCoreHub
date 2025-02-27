@@ -4,9 +4,9 @@ using TaskCoreHub.Core.Entitites;
 
 namespace TaskCoreHub.Infrastructure.Persistence.Configurations
 {
-    public class DemandApplicationConfiguration : IEntityTypeConfiguration<DemandApplication>
+    public class DemandAppConfiguration : IEntityTypeConfiguration<DemandApp>
     {
-        public void Configure(EntityTypeBuilder<DemandApplication> builder)
+        public void Configure(EntityTypeBuilder<DemandApp> builder)
         {
             builder.HasKey(propertyNames => propertyNames.Id);
         }

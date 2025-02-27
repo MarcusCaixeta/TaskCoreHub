@@ -2,9 +2,9 @@
 
 namespace TaskCoreHub.Core.Entitites
 {
-    public class DemandApplication : BaseEntity
+    public class DemandApp : BaseEntity
     {
-        public DemandApplication(int idApplication, int idDemand)
+        public DemandApp(int idApplication, int idDemand)
         {
             IdApplication = idApplication;
             IdDemand = idDemand;
