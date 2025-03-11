@@ -5,6 +5,8 @@ using TaskCoreHub.Application.Queries.UserQueries.GetAllUserCommand;
 
 namespace TaskCoreHub.Api.Controllers
 {
+    [ApiController]
+    [Route("api/user")]
     public class UserController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -12,13 +14,13 @@ namespace TaskCoreHub.Api.Controllers
         {
             _mediator = mediator;
         }
-        [HttpPost("User")]
+        [HttpPost()]
         public async Task<IActionResult> CreateUser([FromBody] CreateUserCommand command)
         {
             var user = await _mediator.Send(command);
             return Ok(user);
         }
-        [HttpGet("User")]
+        [HttpGet()]
         public async Task<IActionResult> GetAllUser()
         {
             var query = new GetAllUserQuery();

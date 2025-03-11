@@ -9,7 +9,7 @@ namespace TaskCoreHub.Core.Repositories
 {
     public interface IUserRepository
     {
-        Task<Guid> Create(User user);
+        Task<int> Create(User user);
         Task<List<User>> GetAllUser ();
     }
 }

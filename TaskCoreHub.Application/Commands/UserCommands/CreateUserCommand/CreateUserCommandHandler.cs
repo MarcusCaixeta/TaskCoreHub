@@ -11,21 +11,21 @@ using TaskCoreHub.Core.Repositories;
 
 namespace TaskCoreHub.Application.Commands.UserCommands.CreateUserCommand
 {
-    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ResponseResult<Guid>>
+    public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, ResponseResult<int>>
     {
         private readonly IUserRepository _repository;
         public CreateUserCommandHandler(IUserRepository repository)
         {
             _repository = repository;
         }
-        public async Task<ResponseResult<Guid>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+        public async Task<ResponseResult<int>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
 
-            var user = new User(request.Name,request.IdEmployee,request.IdTeam,request.IdPosition, request.Email, request.Password);
+            var user = new User( request.Name,request.IdEmployee,request.IdTeam,request.IdPosition, request.Email, request.Password);
 
             await _repository.Create(user);
 
-            return new ResponseResult<Guid>(user.Id);
+            return new ResponseResult<int>(user.Id);
         }
     }
 }

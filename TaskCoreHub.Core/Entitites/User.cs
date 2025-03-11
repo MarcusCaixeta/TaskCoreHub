@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace TaskCoreHub.Core.Entitites
 {
-    public class User : BaseEntity
+    public class User 
     {
-        public User(string name, int idEmployee, int idTeam, int idPosition, string email, string password)
+        public User( string name, int idEmployee, int idTeam, int idPosition, string email, string password)
         {
             Name = name;
             IdEmployee = idEmployee;
@@ -18,6 +18,7 @@ namespace TaskCoreHub.Core.Entitites
         public User() { }
 
 
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public int IdEmployee { get; private set; }
         public int IdTeam { get; private set; }

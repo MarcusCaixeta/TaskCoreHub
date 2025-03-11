@@ -18,7 +18,7 @@ namespace TaskCoreHub.Infrastructure.Repositories
         {
             _dbContext = dbContext;
         }
-        public async Task<Guid> Create(User user)
+        public async Task<int> Create(User user)
         {
             await _dbContext.User.AddAsync(user);
 

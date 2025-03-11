@@ -2,6 +2,8 @@
 using TaskCoreHub.Application.Commands.AppCommands.CreateAppCommand;
 using TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttachmentDemandCommand;
 using TaskCoreHub.Application.Commands.DemandAppCommands.CreateDemandAppCommand;
+using TaskCoreHub.Application.Commands.UserCommands.CreateUserCommand;
+using TaskCoreHub.Application.Queries.UserQueries.GetAllUserCommand;
 
 namespace TaskCoreHub.Application
 {
@@ -20,6 +22,8 @@ namespace TaskCoreHub.Application
                 cfg.RegisterServicesFromAssemblyContaining<CreateAppCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateAttachmentDemandCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateDemandAppCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<CreateUserCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<GetAllUserQuery>();
             });
             return services;
         }
