@@ -22,6 +22,7 @@ namespace TaskCoreHub.Infrastructure
             services.AddScoped<IAppRepository,AppRepository>();
             services.AddScoped<IAttachmentDemandRepository, AttachmentDemandRepository>();
             services.AddScoped<IDemandAppRepository, DemandAppRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
 

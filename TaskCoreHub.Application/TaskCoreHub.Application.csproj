@@ -12,10 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\UserCommands\CreateUserCommand\" />
     <Folder Include="Commands\DemandCommands\CreateDemandCommand\" />
     <Folder Include="Commands\LogDemandCommands\CreateLogDemandCommand\" />
-    <Folder Include="Commands\UserCommands\" />
     <Folder Include="Commands\TypeLogCommands\" />
     <Folder Include="Commands\TeamCommands\" />
     <Folder Include="Commands\StatusDemandCommands\" />
@@ -26,7 +24,6 @@
     <Folder Include="Commands\DemandCommands\" />
     <Folder Include="Commands\LogDemandCommands\" />
     <Folder Include="Commands\ReasonCommands\" />
-    <Folder Include="Queries\" />
   </ItemGroup>
 
   <ItemGroup>
