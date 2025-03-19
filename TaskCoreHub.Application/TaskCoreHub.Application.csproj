@@ -12,18 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\LogDemandCommands\CreateLogDemandCommand\" />
-    <Folder Include="Commands\TypeLogCommands\" />
-    <Folder Include="Commands\TeamCommands\" />
-    <Folder Include="Commands\StatusDemandCommands\" />
-    <Folder Include="Commands\ReasonCommands\CreateReasonCommand\" />
-    <Folder Include="Commands\StatusDemandCommands\CreateStatusDemandCommand\" />
-    <Folder Include="Commands\TeamCommands\CreateTeamCommand\" />
-    <Folder Include="Commands\TypeLogCommands\CreateTypeLogCommand\" />
-    <Folder Include="Commands\ReasonCommands\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TaskCoreHub.Core\TaskCoreHub.Core.csproj" />
   </ItemGroup>
 

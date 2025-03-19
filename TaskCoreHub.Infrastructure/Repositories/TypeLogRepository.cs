@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,28 +9,21 @@ using TaskCoreHub.Infrastructure.Persistence.Context;
 
 namespace TaskCoreHub.Infrastructure.Repositories
 {
-    public class AppRepository : IAppRepository
+    public class TypeLogRepository : ITypeLogRepository
     {
         private readonly TaskCoreHubDbContext _dbContext;
 
-        public AppRepository(TaskCoreHubDbContext dbContext)
+        public TypeLogRepository(TaskCoreHubDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-
-        async Task<Guid> IAppRepository.Create(App app)
+        public async Task<Guid> Create(TypeLog typeLog)
         {
-            await _dbContext.App.AddAsync(app);
+            await _dbContext.TypeLog.AddAsync(typeLog);
 
             await _dbContext.SaveChangesAsync();
 
-            return app.Id;
-        }
-        public async Task<List<App>> GetAllApp()
-        {
-            var app = await _dbContext.App.ToListAsync();
-
-            return app;
+            return typeLog.Id;
         }
     }
 }

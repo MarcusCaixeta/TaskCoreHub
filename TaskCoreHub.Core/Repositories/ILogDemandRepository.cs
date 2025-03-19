@@ -1,9 +1,9 @@
 ﻿using TaskCoreHub.Core.Entitites;
+
 namespace TaskCoreHub.Core.Repositories
 {
-    public interface IDemandAppRepository
+    public interface ILogDemandRepository
     {
-        Task<Guid> Create(DemandApp demandApp);
-
+        Task<Guid> Create(LogDemand logDemand);
     }
 }

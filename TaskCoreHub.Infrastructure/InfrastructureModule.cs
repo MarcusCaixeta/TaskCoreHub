@@ -23,6 +23,12 @@ namespace TaskCoreHub.Infrastructure
             services.AddScoped<IAttachmentDemandRepository, AttachmentDemandRepository>();
             services.AddScoped<IDemandAppRepository, DemandAppRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IDemandRepository, DemandRepository>();
+            services.AddScoped<ILogDemandRepository, LogDemandRepository>();
+            services.AddScoped<IReasonRepository, ReasonRepository>();
+            services.AddScoped<IStatusDemandRepository, StatusDemandRepository>();
+            services.AddScoped<ITeamRepository, TeamRepository>();
+            services.AddScoped<ITypeLogRepository, TypeLogRepository>();
             return services;
         }
 

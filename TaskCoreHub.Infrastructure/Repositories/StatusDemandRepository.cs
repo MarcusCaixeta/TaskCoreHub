@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,28 +9,22 @@ using TaskCoreHub.Infrastructure.Persistence.Context;
 
 namespace TaskCoreHub.Infrastructure.Repositories
 {
-    public class AppRepository : IAppRepository
+    public class StatusDemandRepository : IStatusDemandRepository
     {
         private readonly TaskCoreHubDbContext _dbContext;
 
-        public AppRepository(TaskCoreHubDbContext dbContext)
+        public StatusDemandRepository(TaskCoreHubDbContext dbContext)
         {
             _dbContext = dbContext;
         }
-
-        async Task<Guid> IAppRepository.Create(App app)
+        public async Task<Guid> Create(StatusDemand statusDemand)
         {
-            await _dbContext.App.AddAsync(app);
+            await _dbContext.StatusDemand.AddAsync(statusDemand);
 
             await _dbContext.SaveChangesAsync();
 
-            return app.Id;
+            return statusDemand.Id;
         }
-        public async Task<List<App>> GetAllApp()
-        {
-            var app = await _dbContext.App.ToListAsync();
 
-            return app;
-        }
     }
 }
