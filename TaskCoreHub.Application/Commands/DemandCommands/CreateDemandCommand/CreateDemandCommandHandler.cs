@@ -14,7 +14,7 @@ namespace TaskCoreHub.Application.Commands.DemandCommands.CreateDemandCommand
         }
         public async Task<ResponseResult<Guid>> Handle(CreateDemandCommand request, CancellationToken cancellationToken)
         {
-            var createDemand = new Demand(request.Title, request.Description, request.Team, request.StartReason, request.UserCreate, request.DateStart, request.Priority, request.Effort);
+            var createDemand = new Demand(request.Title, request.Description, request.IdTeam, request.IdStartReason, request.IdUserCreate, request.DateStart, request.Priority, request.Effort);
 
             await _repository.Create(createDemand);
 

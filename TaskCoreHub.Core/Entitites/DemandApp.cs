@@ -4,13 +4,13 @@ namespace TaskCoreHub.Core.Entitites
 {
     public class DemandApp : BaseEntity
     {
-        public DemandApp(int idApplication, int idDemand)
+        public DemandApp(Guid idApplication, Guid idDemand)
         {
             IdApplication = idApplication;
             IdDemand = idDemand;
         }
 
-        public int IdApplication { get; private set; }
-        public int IdDemand { get; private set; }
+        public Guid IdApplication { get; private set; }
+        public Guid IdDemand { get; private set; }
     }
 }

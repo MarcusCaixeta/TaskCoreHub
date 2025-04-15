@@ -5,7 +5,7 @@ namespace TaskCoreHub.Application.Commands.DemandAppCommands.CreateDemandAppComm
 {
     public class CreateDemandAppCommand : IRequest<ResponseResult<Guid>>
     {
-        public int IdApplication { get;  set; }
-        public int IdDemand { get;  set; }
+        public Guid IdApplication { get;  set; }
+        public Guid IdDemand { get;  set; }
     }
 }

@@ -6,6 +6,6 @@ namespace TaskCoreHub.Application.Commands.AppCommands.CreateAppCommand
     public class CreateAppCommand : IRequest<ResponseResult<Guid>>
     {
         public string Description { get;  set; }
-        public int IdTeam { get;  set; }
+        public Guid IdTeam { get;  set; }
     }
 }

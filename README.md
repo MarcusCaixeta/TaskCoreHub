@@ -56,3 +56,17 @@
 ## 9. Diagramas
 Pasta Documentos
 ---
+
+## 20. Auxilios
+- **Criação Migrations:** Criação migrations - dotnet ef migrations add InitialCreate --project TaskCoreHub.Infrastructure --startup-project TaskCoreHub.API. Ficar na raiz do projeto, ex: C:\GITHUB\taskcorehub>. 
+
+- **Exclusão Tabela Migrations:** dotnet ef database drop --startup-project TaskCoreHub.API
+. Ficar na raiz do projeto, ex: C:\GITHUB\taskcorehub>. 
+
+- **Criação/Atualização Tabela Migrations:** dotnet ef database update --startup-project TaskCoreHub.API
+. Ficar na raiz do projeto, ex: C:\GITHUB\taskcorehub>. 
+
+- **Criação/Atualização Tabela Migrations:** dotnet ef database update --startup-project TaskCoreHub.API
+. Ficar na raiz do projeto, ex: C:\GITHUB\taskcorehub>. 
+
+

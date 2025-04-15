@@ -9,6 +9,7 @@ using TaskCoreHub.Application.Commands.StatusDemandCommands.CreateStatusDemandCo
 using TaskCoreHub.Application.Commands.TeamCommands.CreateTeamCommand;
 using TaskCoreHub.Application.Commands.TypeLogCommands.CreateTypeLogCommand;
 using TaskCoreHub.Application.Commands.UserCommands.CreateUserCommand;
+using TaskCoreHub.Application.Queries.AttachmentDemandQueries.GetAllAttachmentDemandQuery;
 using TaskCoreHub.Application.Queries.UserQueries.GetAllUserCommand;
 
 namespace TaskCoreHub.Application
@@ -27,6 +28,7 @@ namespace TaskCoreHub.Application
             {
                 cfg.RegisterServicesFromAssemblyContaining<CreateAppCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateAttachmentDemandCommand>();
+                cfg.RegisterServicesFromAssemblyContaining<GetAllAttachmentDemandQuery>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateDemandAppCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateUserCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<GetAllUserQuery>();

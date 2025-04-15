@@ -5,9 +5,9 @@ namespace TaskCoreHub.Application.Commands.LogDemandCommands.CreateLogDemandComm
 {
     public class CreateLogDemandCommand : IRequest<ResponseResult<Guid>>
     {
-        public int IdDemand { get; set; }
-        public int IdUserLog { get; set; }
-        public int IdTypeLog { get; set; }
+        public Guid IdDemand { get; set; }
+        public Guid IdUserLog { get; set; }
+        public Guid IdTypeLog { get; set; }
         public string DescriptionLog { get; set; }
     }
 }

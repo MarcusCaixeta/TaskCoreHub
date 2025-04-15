@@ -5,13 +5,13 @@ namespace TaskCoreHub.Core.Entitites
     {
         public App() { }
 
-        public App(string description, int idTeam)
+        public App(string description, Guid idTeam)
         {
             Description = description;
             IdTeam = idTeam;
         }
 
         public string Description { get; private set; }
-        public int IdTeam { get; private set; }
+        public Guid IdTeam { get; private set; }
     }
 }

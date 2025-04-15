@@ -17,13 +17,13 @@ namespace TaskCoreHub.Api.Controllers
         {
             _mediator = mediator;
         }
-        [HttpPost("App")]
+        [HttpPost("")]
         public async Task<IActionResult> CreateApp([FromBody] CreateAppCommand command)
         {
             var appId = await _mediator.Send(command);
             return Ok(appId);
         }
-        [HttpGet("App")]
+        [HttpGet("")]
         public async Task<IActionResult> GetAllApp()
         {
             var query = new GetAllAppQuery();

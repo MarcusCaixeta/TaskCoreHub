@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace TaskCoreHub.Infrastructure.Repositories
         public AttachmentDemandRepository(TaskCoreHubDbContext dbContext)
         {
             _dbContext = dbContext;
-        }
+        }       
 
         async Task<Guid> IAttachmentDemandRepository.Create(AttachmentDemand attachmentDemand)
         {
@@ -25,6 +26,12 @@ namespace TaskCoreHub.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
 
             return attachmentDemand.Id;
+        }
+        public async Task<List<AttachmentDemand>> GetAllAttachmentDemand()
+        {
+            var attachmentDemand = await _dbContext.AttachmentDemand.ToListAsync();
+
+            return attachmentDemand;
         }
     }
 }

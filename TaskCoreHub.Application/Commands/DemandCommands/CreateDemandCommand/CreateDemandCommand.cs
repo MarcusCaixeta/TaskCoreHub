@@ -9,9 +9,9 @@ namespace TaskCoreHub.Application.Commands.DemandCommands.CreateDemandCommand
     {
         public string Title { get;  set; }
         public string Description { get;  set; }
-        public Team Team { get;  set; }
-        public Reason StartReason { get; set; }
-        public User UserCreate { get; set; }
+        public Guid IdTeam { get;  set; }
+        public Guid IdStartReason { get; set; }
+        public Guid IdUserCreate { get; set; }
         public Priority Priority { get; set; }
         public DateTime DateStart { get; set; }
         public int Effort { get; set; }
