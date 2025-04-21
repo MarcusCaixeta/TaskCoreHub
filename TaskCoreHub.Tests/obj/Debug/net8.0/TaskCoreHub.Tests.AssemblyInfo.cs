@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskCoreHub.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+098dfbe3886812b5e549700bfcbe6a0222571ded")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5576af51655a25b3e60e1db56c118f39bdc821fc")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskCoreHub.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskCoreHub.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

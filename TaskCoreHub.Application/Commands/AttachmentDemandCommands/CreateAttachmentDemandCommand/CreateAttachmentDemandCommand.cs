@@ -5,8 +5,8 @@ namespace TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttach
 {
     public class CreateAttachmentDemandCommand : IRequest<ResponseResult<Guid>>
     {
-        public Guid IdDemand { get; private set; }
-        public string Description { get; private set; }
-        public string KeyAttachment { get; private set; }
+        public Guid IdDemand { get;  set; }
+        public string Description { get;  set; }
+        public string KeyAttachment { get;  set; }
     }
 }
