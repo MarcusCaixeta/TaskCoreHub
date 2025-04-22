@@ -6,7 +6,7 @@ namespace TaskCoreHub.Application.Interfaces.Messaging
     public interface IMessageConsumer
     {
         Task StartListeningAsync(string queueUrl, CancellationToken cancellationToken);
-        Task<List<QueueMessage>> ReceiveMessagesAsync();
+         Task<List<QueueMessage>> ReceiveMessagesAsync();
         Task DeleteMessageAsync(string receiptHandle);
 
     }

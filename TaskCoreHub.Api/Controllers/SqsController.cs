@@ -1,7 +1,9 @@
-﻿using Amazon.SQS.Model;
+﻿using Amazon.SecretsManager;
+using Amazon.SQS.Model;
 using Microsoft.AspNetCore.Mvc;
 using TaskCoreHub.Application.DTOs;
 using TaskCoreHub.Application.Interfaces.Messaging;
+using TaskCoreHub.Application.Interfaces.Secrets;
 
 [ApiController]
 [Route("api/sqs")]
@@ -9,11 +11,14 @@ public class SqsController : ControllerBase
 {
     private readonly IMessagePublisher _messagePublisher;
     private readonly IMessageConsumer _messageConsumer;
+    private readonly IAwsSecrets _awsSecrets;
 
-    public SqsController(IMessagePublisher messagePublisher, IMessageConsumer messageConsumer)
+
+    public SqsController(IMessagePublisher messagePublisher, IMessageConsumer messageConsumer, IAwsSecrets awsSecrets)
     {
         _messagePublisher = messagePublisher;
         _messageConsumer = messageConsumer;
+        _awsSecrets = awsSecrets;
     }
 
     [HttpPost("send")]
@@ -52,5 +57,12 @@ public class SqsController : ControllerBase
     {
         var messages = await _messageConsumer.ReceiveMessagesAsync();
         return Ok(messages);
+    }
+
+    [HttpGet("secrets")]
+    public async Task<ActionResult<List<AwsSecretsDto>>> getSecrets()
+    {
+        var secrets = await _awsSecrets.ReceiveSecretsAsync("teste");
+        return Ok(secrets);
     }
 }

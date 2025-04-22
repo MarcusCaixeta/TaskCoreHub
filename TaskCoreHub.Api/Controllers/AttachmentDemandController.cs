@@ -7,7 +7,7 @@ namespace TaskCoreHub.Api.Controllers
 {
     [ApiController]
     [Route("api/attachmentdemand")]
-    public class AttachmentDemandController : Controller
+    public class AttachmentDemandController : ControllerBase
     {
         private readonly IMediator _mediator;
 
@@ -16,10 +16,10 @@ namespace TaskCoreHub.Api.Controllers
             _mediator = mediator;
         }
         [HttpPost("")]
-        public async Task<IActionResult> CreateAttachmentDemand([FromBody] CreateAttachmentDemandCommand command)
+        public async Task<IActionResult> CreateAttachmentDemand([FromForm] CreateAttachmentDemandCommand command)
         {
-            var appId = await _mediator.Send(command);
-            return Ok(appId);
+            var attachmentDemandId = await _mediator.Send(command);
+            return Ok(attachmentDemandId);
         }
         [HttpGet("")]
         public async Task<IActionResult> GetAllAttachmentDemand()

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Amazon.S3;
+using Amazon.Extensions.NETCore.Setup;
+using Microsoft.Extensions.DependencyInjection;
 using TaskCoreHub.Application.Commands.AppCommands.CreateAppCommand;
 using TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttachmentDemandCommand;
 using TaskCoreHub.Application.Commands.DemandAppCommands.CreateDemandAppCommand;
@@ -39,6 +41,7 @@ namespace TaskCoreHub.Application
                 cfg.RegisterServicesFromAssemblyContaining<CreateTeamCommand>();
                 cfg.RegisterServicesFromAssemblyContaining<CreateTypeLogCommand>();
             });
+
             return services;
         }
     }

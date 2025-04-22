@@ -1,5 +1,8 @@
 ﻿using MediatR;
 using TaskCoreHub.Application.Models;
+using Microsoft.AspNetCore.Http;
+
+
 
 namespace TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttachmentDemandCommand
 {
@@ -7,6 +10,6 @@ namespace TaskCoreHub.Application.Commands.AttachmentDemandCommands.CreateAttach
     {
         public Guid IdDemand { get;  set; }
         public string Description { get;  set; }
-        public string KeyAttachment { get;  set; }
+        public IFormFile Arquivo { get; set; }
     }
 }

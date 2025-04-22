@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Amazon.S3;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,7 @@ namespace TaskCoreHub.Infrastructure
             services.AddScoped<IStatusDemandRepository, StatusDemandRepository>();
             services.AddScoped<ITeamRepository, TeamRepository>();
             services.AddScoped<ITypeLogRepository, TypeLogRepository>();
+
             return services;
         }
 
